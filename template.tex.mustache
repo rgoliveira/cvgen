@@ -1,0 +1,128 @@
+{{=!! !!=}}
+% possible options include
+%   font size ('10pt', '11pt' and '12pt')
+%   paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape')
+%   font family ('sans' and 'roman')
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvstyle{banking}
+
+% color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{blue}
+
+% to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\renewcommand{\familydefault}{\sfdefault}
+
+% uncomment to suppress automatic page numbering for CVs longer than one page
+\nopagenumbers{}
+
+% character encoding
+% if not using xelatex ou lualatex, set the encoding you're using
+\usepackage[utf8]{inputenc}
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+
+% change the width of the column with the dates
+%\setlength{\hintscolumnwidth}{3cm}
+
+% for the 'classic' style, force the width allocated to the name and avoid line breaks.
+% be careful though, the length is normally calculated to avoid any overlap with your personal info
+%\setlength{\makecvtitlenamewidth}{10cm}
+
+\usepackage{import}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                personal data                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\name{!!firstname!!}{!!lastname!!}
+
+%\title{Curriculum Vitae}
+
+%\address{!!address!!}{!!city!!}{!!country!!}
+
+\phone[mobile]{!!mobile!!}
+
+%\phone[fixed]{!!fixed!!}
+
+\email{!!email!!}
+
+\homepage{!!website!!}
+
+% '64pt' is the height the picture must be resized to,
+% 0.4pt is the thickness of the frame around it (put it to 0pt for no frame)
+% and 'picture' is the name of the picture file
+%\photo[64pt][0.4pt]{picture}
+
+%\quote{Some quote}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                   content                                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\makecvtitle
+
+\small{!!bio!!}
+
+\section{!!experience_section!!}
+\vspace{3pt}
+\begin{itemize}
+  !!#experiences!!
+    \item{\cventry{!!interval!!}{!!title!!}{!!company!!}{!!location!!}{}{\vspace{3pt}!!job_description!!}}
+    \vspace{3pt}
+  !!/experiences!!
+\end{itemize}
+
+\section{!!education_section!!}
+\vspace{3pt}
+\begin{itemize}
+  !!#education!!
+    \item{\cventry{!!interval!!}{!!title!!}{!!institution!!}{!!location!!}{}{\textit{!!extra_info!!}}}
+  !!/education!!
+\end{itemize}
+
+\section{!!knowledge_section!!}
+\vspace{3pt}
+\begin{itemize}
+!!#knowledge!!
+  \item \textbf{!!title!!} \\
+    !!description!!
+  \vspace{3pt}
+!!/knowledge!!
+\end{itemize}
+
+\newpage
+
+%\section{!!other_info_section!!}
+%\vspace{6pt}
+
+%\subsection{!!interests_section!!}
+\section{!!interests_section!!}
+\begin{itemize}
+!!#interests!!
+\item{!!description!!}
+\vspace{3pt}
+!!/interests!!
+\end{itemize}
+
+\vspace{3pt}
+
+%\subsection{!!projects_section!!}
+\section{!!projects_section!!}
+\begin{itemize}
+!!#projects!!
+  \item \textbf{!!title!!} \textit{(!!technologies!!)} \\
+  !!description!!
+  \vspace{3pt}
+!!/projects!!
+\end{itemize}
+
+%\section{References}
+%\vspace{6pt}
+%\begin{itemize}
+%\item{Up to 4 references available on request}
+%\end{itemize}
+
+\end{document}

@@ -1,0 +1,26 @@
+{
+  "name": "cvgen",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgoliveira/cvgen.git"
+  },
+  "author": "rgoliveira",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/rgoliveira/cvgen/issues"
+  },
+  "homepage": "https://github.com/rgoliveira/cvgen#readme",
+  "dependencies": {
+    "html-entities": "^1.2.0",
+    "js-yaml": "^3.8.2",
+    "merge": "^1.2.0",
+    "mustache": "^2.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "eslint-config-standard": "^7.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^2.1.1"
+  }
+}
